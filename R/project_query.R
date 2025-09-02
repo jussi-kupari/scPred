@@ -130,14 +130,22 @@ if(alignment){
   cat(crayon::green(cli::symbol$record, " Aligning new data to reference...\n"))
   
   set.seed(seed)
-  harmony_embeddings <- HarmonyMatrix(eigenspace, 
+#  harmony_embeddings <- HarmonyMatrix(eigenspace, 
+ #                                     meta_data, 
+  #                                    'dataset', 
+   #                                   do_pca = FALSE, 
+    #                                  reference_values = "reference",
+     #                                 max.iter.harmony = max.iter.harmony, 
+      #                                ...)
+  
+  harmony_embeddings <- RunHarmony(eigenspace, 
                                       meta_data, 
                                       'dataset', 
                                       do_pca = FALSE, 
                                       reference_values = "reference",
-                                      max.iter.harmony = max.iter.harmony, 
+                                      max_iter = max.iter.harmony, 
                                       ...)
-  
+
   new_embeddings_aligned <- harmony_embeddings[dataset == "new", , drop = FALSE]
   
 }else{
