@@ -141,7 +141,7 @@ if(alignment){
   harmony_embeddings <- RunHarmony(eigenspace, 
                                       meta_data, 
                                       'dataset', 
-                                      do_pca = FALSE, 
+                                      #do_pca = FALSE, 
                                       reference_values = "reference",
                                       max_iter = max.iter.harmony, 
                                       ...)
