@@ -14,7 +14,7 @@
 #' @keywords prediction, new, test, validation
 #' @importFrom methods is
 #' @importFrom SeuratObject Embeddings Stdev DefaultAssay CreateDimReducObject VariableFeatures Loadings GetAssayData
-#' @importFrom harmony HarmonyMatrix
+#' @importFrom harmony HarmonyMatrix RunHarmony
 #' @export
 #' @author
 #' José Alquicira Hernández
