@@ -14,7 +14,7 @@
 #' @keywords prediction, new, test, validation
 #' @importFrom methods is
 #' @importFrom SeuratObject Embeddings Stdev DefaultAssay CreateDimReducObject VariableFeatures Loadings GetAssayData
-#' @importFrom harmony HarmonyMatrix RunHarmony
+#' @importFrom harmony HarmonyMatrix
 #' @export
 #' @author
 #' José Alquicira Hernández
@@ -138,7 +138,7 @@ if(alignment){
      #                                 max.iter.harmony = max.iter.harmony, 
       #                                ...)
   
-  harmony_embeddings <- RunHarmony(eigenspace, 
+  harmony_embeddings <- harmony::RunHarmony(eigenspace, 
                                       meta_data, 
                                       'dataset', 
                                       #do_pca = FALSE, 
