@@ -84,7 +84,8 @@ if(alignment){
   
   
   
-  new_data <- GetAssayData(new, slot = "data")[shared_features,]
+  #new_data <- GetAssayData(new, slot = "data")[shared_features,]
+  new_data <- GetAssayData(new, layer = "data")[shared_features,]
   means <- spmodel@scaling$means
   stdevs  <- spmodel@scaling$stdevs
   new_data <- Matrix::t(new_data)
